@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, StatusBar } from "react-native";
 import AddTodo from "./containers/AddTodo";
+import VisibleTodos from "./containers/VisibleTodos";
 
 class TodoApp extends Component {
 	constructor(props) {
@@ -10,9 +11,15 @@ class TodoApp extends Component {
 
 	render() {
 		return (
+			<>
+			<StatusBar />
 			<View>
 				<AddTodo />
 			</View>
+			<View>
+				<VisibleTodos />
+			</View>
+			</>
 		);
 	}
 }
